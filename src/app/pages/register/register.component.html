@@ -1,6 +1,12 @@
-<form autocomplete='off' class='form'>
+<form autocomplete='off'
+    class='form'
+    [formGroup]="registerForm"
+    (ngSubmit)="onSubmit()">
     <div class='control block-cube block-input'>
-      <input name='username' placeholder='Username' type='text'>
+      <input name='username'
+            formControlName="username"
+            placeholder='Username'
+            type='text'>
       <div class='bg-top'>
         <div class='bg-inner'></div>
       </div>
@@ -12,7 +18,10 @@
       </div>
     </div>
     <div class='control block-cube block-input'>
-        <input name='email' placeholder='email' type='email'>
+        <input name='email'
+        placeholder='email'
+        formControlName="email"
+        type='email'>
         <div class='bg-top'>
           <div class='bg-inner'></div>
         </div>
@@ -24,7 +33,25 @@
         </div>
       </div>
     <div class='control block-cube block-input'>
-      <input name='password' placeholder='Password' type='password'>
+      <input name='password'
+      placeholder='Password'
+      formControlName="password"
+      type='password'>
+      <div class='bg-top'>
+        <div class='bg-inner'></div>
+      </div>
+      <div class='bg-right'>
+        <div class='bg-inner'></div>
+      </div>
+      <div class='bg'>
+        <div class='bg-inner'></div>
+      </div>
+    </div>
+    <div class='control block-cube block-input'>
+      <input name='password2'
+      placeholder='Confirm'
+      formControlName="password2"
+      type='password'>
       <div class='bg-top'>
         <div class='bg-inner'></div>
       </div>
@@ -45,9 +72,9 @@
       <div class='bg'>
         <div class='bg-inner'></div>
       </div>
-      <div class='text'>
-        S'inscrire
-      </div>
+      <button type="submit" class='text'>
+        Register
+      </button>
     </button>
   </form>
   
